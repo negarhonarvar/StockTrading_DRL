@@ -5,7 +5,9 @@ We begin by discussing the challenges in stock trading, particularly the issues 
 ## Dataset:
 The dataset includes stock prices from major companies like NVIDIA, Microsoft, Apple, Amazon, and Google, covering the period from January 1, 2009, to June 1, 2024. Due to significant market events like the 2020 pandemic and the start of wars, the dataset is divided into training (2009-2022) and testing (2022-2024) periods. A metric called "Turbulence Threshold" is introduced to handle extreme market fluctuations.
 
-<img src="https://github.com/user-attachments/assets/171e2bca-7481-413b-b0c9-b18e35907f5e" width="400">
+<p align = "center">
+  <img src="https://github.com/user-attachments/assets/171e2bca-7481-413b-b0c9-b18e35907f5e" width="400">
+</p>
 
 ## Data Processing:
 Before training the model, the data undergoes several preprocessing steps, such as normalization and feature extraction. The importance of data consistency, the impact of weighting data points, and strategies for maintaining data integrity are emphasized.
@@ -13,17 +15,20 @@ Before training the model, the data undergoes several preprocessing steps, such 
 The environment is designed using the OpenAI framework, simulating a stock market where the agent (trading algorithm) can buy, sell, or hold stocks. The action space is defined as discrete actions corresponding to buying, selling, or holding stocks, while the observation space includes various stock-related metrics like prices, indicators, etc.
 ## Model Architecture:
 The proposed model is a CLSTM-PPO (Cascading Long Short-Term Memory - Proximal Policy Optimization) model. It uses LSTM layers to capture temporal dependencies in stock data and a PPO algorithm to optimize trading decisions. The model is trained to maximize cumulative returns while minimizing risks like maximum pullback.
+<p align = "center">
+  <img src="https://github.com/user-attachments/assets/3779b6d7-b0d8-4762-819d-d88ca07030b7" width="400">
 
-<img src="https://github.com/user-attachments/assets/3779b6d7-b0d8-4762-819d-d88ca07030b7" width="400">
+  <img src="https://github.com/user-attachments/assets/ea280a11-41d6-415a-a631-cc9d20d8257c" width="400">
 
-<img src="https://github.com/user-attachments/assets/ea280a11-41d6-415a-a631-cc9d20d8257c" width="400">
+  <img src="https://github.com/user-attachments/assets/ef5cc95a-cafa-4ca5-9b0f-128421a0e9e7" width="400">
 
-<img src="https://github.com/user-attachments/assets/ef5cc95a-cafa-4ca5-9b0f-128421a0e9e7" width="400">
+</p>
 
 The following algorithm summarizes the process of our work:
 
-<img src="https://github.com/user-attachments/assets/9c327872-132a-4f25-beb1-9daecd32c0ea" width="400">
-
+<p align = "center">
+  <img src="https://github.com/user-attachments/assets/9c327872-132a-4f25-beb1-9daecd32c0ea" width="400">
+</p>
 
 ## Evaluation Metrics:
 The model’s performance is evaluated using several financial metrics:
@@ -34,16 +39,17 @@ The model’s performance is evaluated using several financial metrics:
     Average Profitability Per Trade (APPT)
     Sharpe Ratio (SR)
 
-<img src="https://github.com/user-attachments/assets/c4e6551c-d75c-409d-b2d8-5af1c2c51e76" width="400">
+<p align = "center">
+  <img src="https://github.com/user-attachments/assets/c4e6551c-d75c-409d-b2d8-5af1c2c51e76" width="400">
 
-<img src="https://github.com/user-attachments/assets/69e0ec3b-3245-447c-a3fe-c004d437cf57" width="400">
+  <img src="https://github.com/user-attachments/assets/69e0ec3b-3245-447c-a3fe-c004d437cf57" width="400">
 
-<img src="https://github.com/user-attachments/assets/a93cb337-4c42-4e24-92a6-8d0a466b20d6" width="400">
+  <img src="https://github.com/user-attachments/assets/a93cb337-4c42-4e24-92a6-8d0a466b20d6" width="400">
 
-<img src="https://github.com/user-attachments/assets/c5f1ab46-cde9-4792-9c2a-1f2976074a75" width="400">
+  <img src="https://github.com/user-attachments/assets/c5f1ab46-cde9-4792-9c2a-1f2976074a75" width="400">
 
-<img src="https://github.com/user-attachments/assets/ebc7cd26-e919-43e6-8b42-639fd495e934" width="400">
-
+  <img src="https://github.com/user-attachments/assets/ebc7cd26-e919-43e6-8b42-639fd495e934" width="400">
+</p>
 
 These metrics help assess the profitability, risk, and overall performance of the trading strategy.
 ## Hyperparameters:
@@ -98,21 +104,24 @@ These metrics help assess the profitability, risk, and overall performance of th
         Advantage Estimation: Adjusts how the advantages (differences between expected and actual rewards) are calculated and used in training.
     Implementation: The report suggests setting these parameters according to the recommendations in the related literature or default settings within the Stable Baselines framework to ensure the PPO algorithm performs optimally.
 
+<p align = "center">
    <img src="https://github.com/user-attachments/assets/0eaa416d-accd-4537-a1b1-9ddde14f7723" width="400">
+</p>
 
 ## Results:
 It Is necessary to highlight how larger time windows generally leads to better model performance, but with diminishing returns and increased computational costs.
 
-<img src="https://github.com/user-attachments/assets/6ebc4c26-94c3-47ac-b880-69bf16f5d6c0" width="400">
+<p align = "center">
+   <img src="https://github.com/user-attachments/assets/6ebc4c26-94c3-47ac-b880-69bf16f5d6c0" width="400">
 
-<img src="https://github.com/user-attachments/assets/a46ad482-5b82-42d7-a327-da11200adbf0" width="400">
+   <img src="https://github.com/user-attachments/assets/a46ad482-5b82-42d7-a327-da11200adbf0" width="400">
 
-<img src="https://github.com/user-attachments/assets/e1d6d4d6-a0c7-4142-96da-ee62baec7149" width="400">
+   <img src="https://github.com/user-attachments/assets/e1d6d4d6-a0c7-4142-96da-ee62baec7149" width="400">
 
-<img src="https://github.com/user-attachments/assets/dd8c5a06-3eaf-4060-8ff6-f2f00be23464" width="400">
+   <img src="https://github.com/user-attachments/assets/dd8c5a06-3eaf-4060-8ff6-f2f00be23464" width="400">
 
-<img src="https://github.com/user-attachments/assets/4d04fe87-3073-4279-9315-09d97d8bc085" width="400">
-
+   <img src="https://github.com/user-attachments/assets/4d04fe87-3073-4279-9315-09d97d8bc085" width="400">
+</p>
 
 ## Conclusion:
 While the proposed method can yield profitable trading strategies, it is also sensitive to market conditions and requires careful tuning of hyperparameters.
