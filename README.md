@@ -1,4 +1,4 @@
-# StockTrading_DRL
+# Stock Trading Deep Reinforcement Learning Agent
 Automated stock trading strategy using deep reinforcement learning and recurrent neural networks.
 ## Introduction:
 We begin by discussing the challenges in stock trading, particularly the issues related to noisy and irregular data. The proposed solution is a Deep Reinforcement Learning (DRL) model with an architecture designed to handle these challenges by learning from historical stock data.
